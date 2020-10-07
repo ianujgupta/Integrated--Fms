@@ -1,0 +1,21 @@
+
+<form #getform=ngForm (ngSubmit)="findById(getform)">
+    <div class="form-group">
+        <label>enter the flightschedule ID</label>
+        <input type="number" name="fid" ngModel class="form-control">
+    </div>
+    <input type="submit" value="Get details" class="btn btn-success">
+</form>
+<div *ngIf="flightSchedule!=undefined">
+    <p> Arrival Time is {{ flightSchedule.arrivalTime|date:'short'}}</p>
+    <p> Carrier Name {{ flightSchedule.carrierName}}</p>
+    <p> Departure Time{{ flightSchedule.departureTime|date:'short'}}</p>
+    <p>Flight Model{{ flightSchedule.flightModel}}</p>
+    <p>Flight number {{ flightSchedule.flightNum}}</p>
+    <p>From Airport {{flightSchedule.fromAirport}}</p>
+    <p>To Airport {{flightSchedule.toAirport}}</p>
+    <p>scheduleFlightId is {{ flightSchedule.scheduleFlightId}}</p>
+    <p>ScheduleId is {{ flightSchedule.scheduleId}}</p>
+    <p>seatsAvailable {{ flightSchedule.seatsAvailable}}</p>
+    <p>seatsCapacity is {{ flightSchedule.seatsCapacity}}</p>
+</div> 

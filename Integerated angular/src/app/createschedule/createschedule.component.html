@@ -1,0 +1,26 @@
+
+    <!-- <div class="container"> -->
+    <form #scheduleform=ngForm (ngSubmit)="saveSchedule(scheduleform)">
+        <div class="form-group">
+            <label>FROM</label>
+            <input type="text" name="sourceAirport" ngModel class="form-control">
+        </div>
+        <div class="form-group">
+            <label>TO</label>
+            <input type="text" name="destinationAirport" ngModel class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Arrival Time</label>
+            <input type="datetime-local" name="arrival" ngModel class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Departure Time</label>
+            <input type="datetime-local" name="departureTime" ngModel class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Airport Code</label>
+            <input type="text" name="airportCode" ngModel class="form-control">
+        </div>
+      <input type="submit" value="submit" class="btn btn-dark">
+    </form>
+    <!-- </div> -->

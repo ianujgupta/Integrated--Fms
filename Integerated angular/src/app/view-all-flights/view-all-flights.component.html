@@ -1,0 +1,39 @@
+
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Flight NUMBER</th>
+            <th>Flight Model</th>
+            <th>Carrier Name</th>
+            <th>Seat Capacity</th>
+            <th>Update</th>
+            <th>Remove</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let flight of flights">
+                <td> {{flight.flightNum}} </td>
+                <td> {{flight.flightModel}} </td>
+                <td> {{flight.carrierName}} </td>
+                <td>{{flight.seatCapacity}}</td>              
+                <td>
+                    <button class="btn btn-info" (click)="modifyFlight(flight.flightNum)">Update</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="delete(flight.flightNum)">Remove</button>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+   
+</div>
+
+
+
+
+
+
+
+

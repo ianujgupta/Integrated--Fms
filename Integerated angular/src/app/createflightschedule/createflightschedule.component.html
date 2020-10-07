@@ -1,0 +1,15 @@
+<form #flightform=ngForm (ngSubmit)="saveFlightSchedule(flightform)">
+
+<div class="form-group">
+    <label>enter the schedule id</label>
+    <input type="number" name="id" ngModel class="form-control">
+</div>
+<div class="form-group">
+    <label>enter the seats available</label>
+    <input type="number" name="seats" ngModel class="form-control">
+</div><div class="form-group">
+    <label>enter flightnumber</label>
+    <input type="number" name="flightnumber" ngModel class="form-control">
+</div>
+<input type="submit" value="save flightschedule">
+</form>    

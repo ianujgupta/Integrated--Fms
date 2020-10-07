@@ -1,0 +1,53 @@
+
+<div class="container">
+<p>ADD PASSENGER</p>
+
+<form [formGroup]="passengerForm" (ngSubmit)="passengerForm.valid && addPassenger()">
+
+    <div class="form-group">
+        <label>Passenger Name</label>
+        <input type="text" formControlName="passengerName" ngModel class="form-control">
+    </div>
+
+<div *ngIf="passengerNameCtrl.errors != null && passengerNameCtrl.errors.required" class="alert alert-danger">
+    <div [hidden]='!passengerNameCtrl.errors.required'> Passenger Name is required </div>
+
+</div>
+
+<div class="form-group">
+        <label>Passenger Age</label>
+        <input type="number" formControlName="passengerAge" ngModel class="form-control">
+    </div>
+
+<div *ngIf="passengerAgeCtrl.errors != null &&passengerAgeCtrl.errors.required" class="alert alert-danger">
+    <div [hidden]='!passengerAgeCtrl.errors.required'> Passenger Age is required </div>
+</div>
+<div class="form-group">
+    <label>Passenger UIN</label>
+    <input type="number" formControlName="passengerUIN" ngModel class="form-control">
+</div>
+
+<div *ngIf="passengerUINCtrl.errors != null &&passengerUINCtrl.errors.required" class="alert alert-danger">
+<div [hidden]='!passengerUINCtrl.errors.required'> Passenger UIN is required </div>
+</div>
+<div class="form-group">
+    <label>Luggage</label>
+    <input type="number" formControlName="luggage" ngModel class="form-control">
+</div>
+
+<div *ngIf="luggageCtrl.errors != null &&luggageCtrl.errors.required" class="alert alert-danger">
+<div [hidden]='!luggageCtrl.errors.required'> Luggage is required </div>
+</div>
+
+
+<input type="submit"  class="btn btn-success" value="submit">
+</form>
+<br>
+<div *ngIf="passenger!=undefined">
+<h2>Add Passenger</h2>
+{{passenger.passengerNum}}
+{{passenger.passengerName}}
+{{passenger.passengerAge}}
+{{passenger.passengerUIN}}
+{{passenger.luggage}}
+</div>
